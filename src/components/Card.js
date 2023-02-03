@@ -1,9 +1,26 @@
-function Card({name, image}) {
+import { useState } from 'react'
+function Card({name, image, specialty, weight, greased}) {
+    
+    const [isClicked, setIsClicked] = useState(false)
+
+    function handleClick(){
+        setIsClicked(!isClicked)
+    }
+
+    const divStyle = {
+        display: isClicked ? "block" : "none"
+    }
+
     return (
         
-        <div className="ui eight wide column">
+        <div onClick={handleClick} className="ui eight wide column">
             <h1>{name}</h1>
             <img className ="minPigTile" src={image} alt={name} />
+            <div style={divStyle}>
+                <p>Specialty: {specialty}</p>
+                <p>Weight: {weight}</p>
+                <p>Greased: {greased ? "Yes" : "No"}</p>
+            </div>
         </div>
     
     )
