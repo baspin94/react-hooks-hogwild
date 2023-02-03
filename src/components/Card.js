@@ -1,5 +1,5 @@
 import { useState } from 'react'
-function Card({name, image, specialty, weight, greased}) {
+function Card({name, image, specialty, weight, greased, medal}) {
     
     const [isClicked, setIsClicked] = useState(false)
 
@@ -20,6 +20,7 @@ function Card({name, image, specialty, weight, greased}) {
                 <p>Specialty: {specialty}</p>
                 <p>Weight: {weight}</p>
                 <p>Greased: {greased ? "Yes" : "No"}</p>
+                <p>Medal: {medal}</p>
             </div>
         </div>
     
