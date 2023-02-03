@@ -8,9 +8,7 @@ function CardList({ hogs }) {
 
     return (
         <div className="ui grid container">
-                <ul className="ui eight wide column">
-                    {hogArray}
-                </ul>
+            {hogArray}
         </div>
     )
 };

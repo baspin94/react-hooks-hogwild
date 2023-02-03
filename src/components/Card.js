@@ -1,10 +1,10 @@
 function Card({name, image}) {
     return (
         
-        <li className="pigTile">
+        <div className="ui eight wide column">
             <h1>{name}</h1>
-            <img src={image} alt={name} />
-        </li>
+            <img className ="minPigTile" src={image} alt={name} />
+        </div>
     
     )
 };
