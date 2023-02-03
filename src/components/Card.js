@@ -1,6 +1,9 @@
-function Card() {
+function Card({name, image}) {
     return (
-        console.log("Card here!")
+        <div>
+            <h1>{name}</h1>
+            <img src={image} alt={name} />
+        </div>
     )
 };
 
