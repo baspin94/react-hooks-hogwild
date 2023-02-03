@@ -1,9 +1,11 @@
 function Card({name, image}) {
     return (
-        <div>
+        
+        <li className="pigTile">
             <h1>{name}</h1>
             <img src={image} alt={name} />
-        </div>
+        </li>
+    
     )
 };
 

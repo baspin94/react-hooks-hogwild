@@ -1,8 +1,17 @@
 import Card from "./Card";
 
-function CardList() {
+function CardList({ hogs }) {
+
+    const hogArray = hogs.map(hog => {
+        return <Card key={hog.id} name={hog.name} image={hog.image}/>
+    })
+
     return (
-        console.log("Card list here!")
+        <div className="ui grid container">
+                <ul className="ui eight wide column">
+                    {hogArray}
+                </ul>
+        </div>
     )
 };
 
